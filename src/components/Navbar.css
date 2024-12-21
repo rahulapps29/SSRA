@@ -1,0 +1,142 @@
+/* Navbar Container */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: linear-gradient(45deg, #8FBC8F, #2E8B57);
+  color: white;
+  padding: 5px 10px 5px 10px;
+  position: relative;
+  z-index: 1000;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Navbar Brand Styling */
+.navbar-brand {
+  display: flex;
+  align-items: center; /* Align logo and text vertically */
+  gap: 2px; /* Space between logo and text */
+  text-decoration: none;
+  color: white;
+  overflow: hidden; /* Prevent overflow */
+}
+
+.navbar-logo {
+  align-items: center;
+  max-height: 3rem; /* Limit the height of the logo */
+  max-width: 100%; /* Ensure it scales within the container */
+  object-fit: contain; /* Maintain aspect ratio */
+  /* object-position: 10% 30%; */
+}
+
+.navbar-text {
+  font-size: 1.3rem; /* Slightly larger text for visibility */
+  font-weight: bold; /* Emphasize the brand name */
+  text-transform: uppercase; 
+  color: white;
+}
+
+.navbar-brand:hover .navbar-text {
+  color: #cbd5e0; /* Subtle hover effect for the text */
+}
+
+
+/* Hamburger Menu */
+.hamburger {
+  display: none; /* Hidden on desktop view */
+  flex-direction: column;
+  gap: 5px;
+  cursor: pointer;
+}
+
+.hamburger .line {
+  width: 30px;
+  height: 3px;
+  background-color: white;
+  border-radius: 2px;
+  transition: transform 0.3s, background-color 0.3s;
+}
+
+.hamburger:hover .line {
+  background-color:   #8FBC8F;
+}
+
+/* Navigation Links - Default (Desktop View) */
+.nav-links {
+  display: flex;
+  list-style: none;
+  gap: 30px;
+  margin: 0;
+  padding: 0;
+}
+
+/* Individual Navigation Links */
+.nav-links li {
+  cursor: pointer;
+  color: white;
+  font-size: 18px;
+  font-weight: 500;
+  transition: color 0.3s ease-in-out, transform 0.2s;
+}
+
+.nav-links li:hover {
+  color: #f0e68c;
+  transform: scale(1.1);
+}
+
+/* Mobile-Specific Styles */
+@media (max-width: 767px) {
+  /* Show Hamburger Menu */
+  .hamburger {
+    display: flex;
+  }
+
+  /* Hide Navigation Links by Default */
+  .nav-links {
+    display: none; /* Ensure hidden initially */
+    flex-direction: column;
+    position: absolute;
+    top: 70px;
+    right: 20px;
+    background: linear-gradient(45deg, #8FBC8F, #2E8B57);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    z-index: 10;
+  }
+
+  /* Show Links When Menu Is Open */
+  .nav-links.open {
+    display: flex;
+  }
+
+  /* Mobile Link Styling */
+  .nav-links li {
+    margin: 15px 0;
+    text-align: center;
+    color: white;
+  }
+
+  .nav-links li:hover {
+    color:#2E8B57;
+  }
+}
+
+/* Desktop View */
+@media (min-width: 768px) {
+  .nav-links {
+    display: flex; /* Always visible in desktop view */
+    flex-direction: row;
+    position: static;
+    background-color: transparent;
+    box-shadow: none;
+    padding: 0;
+  }
+}
+
+
+/* Logo Styling */
+.navbar-logo img {
+  height: 50px; /* Adjust height for the logo */
+  object-fit: contain;
+}

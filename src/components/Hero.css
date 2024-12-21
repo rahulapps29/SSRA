@@ -1,0 +1,70 @@
+/* Enhanced Hero Section Styling */
+.hero-section {
+    position: relative;
+    background-color: #f4f4f4; /* Light grey for elegance */
+    color: #333; /* Neutral dark color for text */
+    padding: 5px 10px 5px 10px; /* Generous padding for spacing */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap; /* Ensures responsiveness */
+    text-align: left;
+    overflow: hidden;
+}
+
+.hero-container {
+    max-width: 1200px; /* Center the content */
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column; /* Default column layout */
+    align-items: flex-start;
+    gap: 20px; /* Space between elements */
+}
+
+.hero-content {
+    flex: 1;
+}
+
+.hero-title {
+    font-size: 3rem; /* Larger headline for emphasis */
+    font-weight: 700; /* Bold text for title */
+    line-height: 1.3;
+    margin-bottom: 20px;
+    color: #222; /* Slightly darker for strong visibility */
+}
+
+.hero-title .highlight {
+    color: #1a5a9d; /* Deep blue for emphasis */
+    font-style: italic; /* Adds a subtle elegance */
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1); /* Gentle shadow for depth */
+}
+
+.hero-subtitle {
+    font-size: 1.2rem; /* Larger subtitle for readability */
+    font-weight: 400; /* Regular weight for balance */
+    line-height: 1.8; /* Improved spacing */
+    margin-bottom: 15px;
+    color: #555; /* Softer grey for supporting text */
+}
+
+.hero-container:hover .hero-title .highlight {
+    color: #144573; /* Slight hover effect for interaction */
+    text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.2); /* Enhanced shadow on hover */
+}
+
+/* Responsive Adjustments */
+@media (min-width: 768px) {
+    .hero-container {
+        flex-direction: row; /* Horizontal layout on larger screens */
+        align-items: center;
+        gap: 40px; /* Increased spacing */
+    }
+
+    .hero-title {
+        font-size: 3.5rem; /* Larger title for desktops */
+    }
+
+    .hero-subtitle {
+        font-size: 1.5rem; /* Bigger subtitle for readability */
+    }
+}
